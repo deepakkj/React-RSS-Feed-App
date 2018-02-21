@@ -31,9 +31,12 @@ export default class AddRSSFeedForm extends React.Component {
     render() {
         return(
             <div className="rssfeed-form">
-                <form>
-                        <input type="url" placeholder="Enter RSS feed URL" value={this.state.url} onChange={this.handleURLChange} autoComplete="true" required></input>
-                        <button type="submit" onClick={this.onSubmit}>Add Feed</button>
+                <form className="form-inline">
+                    <div className="form-group">
+                        <label className="sr-only" htmlFor="rssFeedURL">Enter RSS feed URL</label>
+                        <input type="url" className="form-control" placeholder="Enter RSS feed URL" value={this.state.url} onChange={this.handleURLChange} autoComplete="true" required></input>
+                    </div>
+                    <button type="submit" className="btn btn-primary" onClick={this.onSubmit}>Add Feed</button>
                 </form>
             </div>
         )

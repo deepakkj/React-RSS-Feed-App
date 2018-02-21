@@ -28,8 +28,8 @@ class RSSFeedURLList extends React.Component {
     render() {
         return (
             <div>
-            <h3>Feed URLs</h3>
-        <ul className="">
+            <h4>Feed URLs</h4>
+        <ul className="list-group">
                 {this.renderFeedURLList(this.props.feedURLs)}
         </ul>
         </div>

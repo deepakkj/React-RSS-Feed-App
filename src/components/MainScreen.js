@@ -26,7 +26,7 @@ class MainScreen extends React.Component {
   renderFeedURL = (index) => {
     const headerData = this.props.feedURLs[index]
     console.log("headerData ---",headerData);
-    return headerData ? headerData.url : 'Please add a RSS URL';
+    return <h3>{headerData ? headerData.url : 'Please add a RSS URL'}</h3>;
   }
 
   renderChannelFeeds = (index) => {
@@ -48,7 +48,7 @@ class MainScreen extends React.Component {
       console.log(this.props);
       console.log("currentChannelIndex : ",this.state.currentChannelIndex);
       return(
-        <div className="col-xs-offset-3 col-xs-9 col-offset-sm-3 col-sm-9 col-md-offset-2 col-md-10 main-screen">
+        <div className="col-xs-offset-3 col-xs-9 col-offset-sm-3 col-sm-9 col-md-offset-3 col-md-9 main-screen">
           {this.props.channels && this.renderFeedURL(this.state.currentChannelIndex)  }
           <ul>
             {this.props.channels && this.renderChannelFeeds(this.state.currentChannelIndex)}
